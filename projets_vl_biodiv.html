@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Innovation participative Comité Champagne</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="media/images/CIVC_Q.ico" type="civc">
+    <style>
+        body {
+            visibility: hidden;
+        }
+    </style>
+    <script>
+        function checkPassword() {
+            var password = prompt('Veuillez entrer le mot de passe :');
+            if (password === 'pass') {
+                document.body.style.visibility = 'visible';
+            } else {
+                alert('Mot de passe incorrect. Accès refusé.');
+                window.location.href = 'projets.html';
+            }
+        }
+    </script>
+</head>
+<body onload="checkPassword()">
+    <div class="container">
+        <div class="sidebar">
+            <img src="media/images/CIVC_Q.png" alt="Logo de la barre latérale" class="sidebar-logo">
+            <nav>
+                <ul>
+                    <li><a href="projets.html">Projets</a></li>
+                    <li><a href="financements.html">Financements</a></li>
+                    <li><a href="partenaires.html">Partenaires</a></li>
+                    <li><a href="outils.html">Documents</a></li>
+                </ul>
+            </nav>
+        </div>
+        <main>
+            <article class="article-container">
+                <h1 class="article-title">Vignes Lab' : Plan Biodiversité Champagne</h1>
+                <div class="article-content">
+                    <!-- Contenu de l'article -->
+                </div>
+            </article>
+        </main>
+        <footer>
+            <!-- Votre pied de page ici -->
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,392 @@
+/* Réinitialisation des styles par défaut */
+body, h1, p, ul {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Style du conteneur principal */
+.container {
+    display: flex;
+    min-height: 100vh;
+    background-color: #ffffff;
+    background-image: url('https://www.transparenttextures.com/patterns/notebook-dark.png');
+    justify-content: flex-start;
+    overflow: hidden;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Pour le conteneur de la barre de défilement */
+.page-container {
+    overflow: auto;
+}
+
+/* Pour personnaliser la barre de défilement */
+.page-container::-webkit-scrollbar {
+    width: 12px;
+}
+
+/* Pour personnaliser le curseur de la barre de défilement */
+.page-container::-webkit-scrollbar-thumb {
+    background-color: #a8a8a8;
+    border-radius: 10px;
+}
+
+/* Pour personnaliser la piste de la barre de défilement */
+.page-container::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+    border-radius: 10px;
+}
+
+/* Style de la barre latérale */
+.sidebar {
+    position: fixed;
+    background-image: url('https://www.transparenttextures.com/patterns/dark-dot.png');
+    background-repeat: repeat;
+    background-color: #2c3e50;
+    color: #fff;
+    width: 200px;
+    height: 100vh;
+}
+
+.sidebar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    padding: 10px;
+    transition: background-color 0.3s, border-color 0.3s;
+    border: 2px solid #17212c;
+    border-radius: 10px;
+}
+
+.sidebar ul li a:hover {
+    background-color: #1e2b37;
+    border: 1px solid #17212c;
+}
+
+/* Style du contenu principal */
+main {
+    flex: 1;
+    margin-left: 200px;
+}
+.titre-bloc {
+    background-color: #1e2b37;
+    margin-bottom: 0px;
+}
+.titre-projets {
+   text-align: center;
+   padding-bottom: 0;
+   margin-top: 10px;
+   margin-bottom: 10px;
+}
+/* Style du pied de page */
+footer {
+    background-color: #f8f8f8;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Style de la grille pour l'iframe */
+.grid-container {
+    display: grid;
+    grid-template-columns: 200px auto;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "header header"
+        "sidebar main"
+        "footer footer";
+    height: 100vh;
+}
+
+/* Styles pour les boutons */
+main .buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.buttons_article {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.button_container {
+    text-align: center;
+    margin: 20px;
+}
+
+.button_container h2 {
+    margin-bottom: 10px;
+}
+
+.buttons_article a {
+    display: inline-block;
+    width: 200px; /* Ajuster la largeur du bouton selon les besoins */
+    height: 200px; /* Ajuster la hauteur du bouton selon les besoins */
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 20px 0;
+    background-color: transparent; /* Fond transparent pour les boutons */
+    text-align: center;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px; /* Ajuster la taille de police du bouton selon les besoins */
+    line-height: 50px; /* Ajuster la hauteur de ligne pour centrer le texte verticalement */
+}
+
+.buttons_article a img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+.buttons_article a:hover {
+    transform: translateY(3px);
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Styles pour les liens */
+main a {
+    display: block;
+    width: 200px;
+    height: auto;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px;
+    background-color: #ffffff;
+}
+a {
+    text-decoration: none; /* Supprime le soulignement du lien */
+    color: inherit; /* Hérite la couleur du texte du parent */
+}
+
+main a img {
+    width: 100%;
+    height: auto;
+}
+
+main a:hover {
+    transform: translateY(3px);
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Mise en forme paragraphe */
+main p {
+    color: #000000;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* Logo menu de navigation */
+.sidebar-logo {
+    display: block;
+    max-width: 100px; /* Ajustez la largeur selon vos besoins */
+    margin: 20px auto; /* Ajustez les marges selon vos besoins */
+}
+
+main {
+    display: grid;
+    grid-template-areas: 
+        'buttons'
+        'documents';
+}
+
+.section-buttons {
+    grid-area: buttons;
+    position: relative;
+    z-index: 1;
+}
+.documents {
+    display: flex;
+    justify-content: left; 
+    align-items: top;
+}
+.section-documents {
+    grid-area: documents;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.documents footer {
+    text-align: center;
+    font-weight: bold;
+    text-decoration: solid;
+    background-color: #ffffff;
+}
+.document link {
+    text-align: center;
+    text-decoration: none;
+}
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    grid-gap: 20px;
+  }
+  
+  .card {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-left: 18px;
+    border: 1px solid #e5e5e5;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s, transform 0.3s;
+  }
+  .card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(3px);
+  }
+  
+  .card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    max-height: 200px;
+    margin: 0;
+  }
+  
+  .card header {
+    padding: 10px 20px;
+    background-color: #f9f9f9;
+    margin: 0;
+  }
+  
+  .card h2 {
+    margin: 0;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+  }
+  
+  .card .content {
+    padding: 0;
+    text-align: justify;
+    width: 100%;
+    margin: 0;
+  }
+  
+  .card footer {
+    padding: 15px;
+    margin: 0;
+    background-color: #f9f9f9;
+    margin-top: auto;
+    text-align: center;
+  }
+  .card.first-card {
+    margin-left: 20px; /* Ajuster la valeur de la marge selon vos besoins */
+}
+.card a {
+    text-decoration: none; /* Supprime le soulignement du lien */
+    color: inherit; /* Hérite la couleur du texte du parent */
+    display: block;
+    padding: 0; /* Ajoute un espacement autour du lien pour correspondre au texte */
+}
+
+.card a:hover {
+    box-shadow: none;
+}
+
+div.box {
+    width: 100%;
+    float: left;
+    padding: 0px;
+    margin-bottom: 20px;
+    background: #FFF;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+    page-break-inside: avoid;
+  }
+  
+  div.box h1 {
+    position: relative;
+    height: 32px;
+    margin: 0 0 10px 0;
+    padding: 5px 10px;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.05rem;
+    color: #bfbd78 !important;
+    background: #405252 !important;
+    display: flex;
+    align-items: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  
+  div.box h1 a,
+  div.box h1 a:link,
+  div.box h1 a:active,
+  div.box h1 a:visited {
+    width: 100%;
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  div.box h1 a i.icon {
+    float: right;
+  }
+  
+  div.box section {
+    padding: 10px 10px;
+  }
+  .article-container {
+    width: 95%;
+    margin: 0;
+    text-align: left;
+    background-color: #ffffff;
+}
+
+.article-title {
+    font-size: 2em;
+    text-align: center;
+    margin: 20px 0;
+    color: #333;
+}
+
+.article-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: left;
+    color: #333;
+    margin: 20px 0;
+}
+
+.article-image {
+    display: flex;
+    margin: 20px;
+    max-width: 95%; /* Ajustez la largeur maximale selon vos besoins */
+    height: auto; /* Assurez-vous que la hauteur s'ajuste automatiquement */
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
